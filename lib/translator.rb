@@ -1,8 +1,8 @@
 # require modules here
 require 'yaml'
-def load_library(file_path)
+def load_library(file)
   library = {"get_meaning" => {}, "get_emoticon" => {}}
-  YAML.load_file(file_path).each do |meaning, array|
+  YAML.load_file(file).each do |meaning, array|
     english, japanese = array
     library["get_emoticon"][english] = japanese
     library["get_meaning"][japanese] = meaning
