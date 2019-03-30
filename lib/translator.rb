@@ -4,8 +4,8 @@ def load_library(file)
   library = {"get_meaning" => {}, "get_emoticon" => {}}
   YAML.load_file(file).each do |meaning, array|
     english, japanese = array
-    library['get_meaning'][english] = japanese
-    library['get_emoticon'][japanese] = meaning
+    library["get_emoticon"][english] = japanese
+    library["get_meaning"][japanese] = meaning
   end
     library
 end
